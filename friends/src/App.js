@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import PrivateRoute from './component/PrivateRoute';
 import LoginForm from './Forms/LoginForm';
-import NewFriend from './Forms/NewFriend';
+import FriendForm from './Forms/FriendForm';
 import './App.css';
 
 function App(props) {
@@ -20,7 +20,7 @@ function App(props) {
           </li>
         </ul>
         <Switch>
-          <PrivateRoute exact path='/protected' component={NewFriend} />
+          <PrivateRoute exact path='/protected' component={FriendForm} />
           <Route path='/login' component={LoginForm} />
           <Route component={LoginForm} />
         </Switch>
